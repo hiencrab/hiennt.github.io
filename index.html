@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nguyễn Thế Hiển, IT Manager</title>
+<meta name="description" content="IT Manager in Ho Chi Minh City. More than ten years in network engineering, system administration, software development and automation, plus experience running a manufacturing plant.">
+<meta name="theme-color" content="#0E1B2C">
+<meta property="og:title" content="Nguyễn Thế Hiển, IT Manager">
+<meta property="og:description" content="Factory IT, infrastructure and automation. Leads the IT team at MISUMI Vietnam.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1B2C'/%3E%3Crect x='7' y='9' width='18' height='4' rx='2' fill='%23F2B705'/%3E%3Crect x='7' y='19' width='11' height='4' rx='2' fill='%23F2F4F5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=JetBrains+Mono:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0E1B2C;
+  --paper: #F2F4F5;
+  --rule: #C9D1D8;
+  --muted: #4A5A6B;
+  --link: #2457C5;
+  --fibre: #F2B705;
+  --term-bg: #0E1B2C;
+  --term-fg: #DCE6EF;
+  --term-muted: #93A6BA;
+  --term-rule: #25374D;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #E8EEF3;
+    --paper: #0A1320;
+    --rule: #24364B;
+    --muted: #9DB0C3;
+    --link: #8FB0F5;
+    --term-bg: #12233A;
+    --term-rule: #2B4260;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--body);
+  font-optical-sizing: auto;
+}
+a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--fibre); outline-offset: 3px; border-radius: 2px; }
+
+.wrap { width: min(70rem, 100% - 2.5rem); margin-inline: auto; }
+
+/* ---------- Masthead ---------- */
+.masthead { padding-block: clamp(2.5rem, 7vw, 5.5rem) clamp(2rem, 4vw, 3rem); }
+h1 {
+  margin: 0;
+  font: 800 clamp(2.5rem, 9vw, 6.25rem)/0.95 var(--display);
+  font-stretch: 118%;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.role {
+  margin: 1.25rem 0 0;
+  font: 600 clamp(1.1rem, 2.4vw, 1.5rem)/1.3 var(--display);
+  font-stretch: 105%;
+}
+.intro { max-width: 40rem; margin: 1.25rem 0 0; font-size: 1.1875rem; }
+.contact {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem;
+  margin: 1.75rem 0 0; padding: 0; list-style: none;
+  font-family: var(--display); font-weight: 600; font-size: 1rem;
+}
+
+/* ---------- Career route (the one loud element) ---------- */
+.route {
+  background: var(--term-bg);
+  color: var(--term-fg);
+  border-radius: 6px;
+  padding: clamp(1rem, 3vw, 2rem);
+  margin-block: 0.5rem 0;
+}
+.route-head {
+  margin: 0 0 1rem; padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--term-rule);
+  font: 400 0.875rem/1.5 var(--mono);
+  color: var(--term-muted);
+}
+.route-head h2 { display: inline; margin: 0; font: inherit; color: var(--term-fg); }
+
+.hop { border-bottom: 1px solid var(--term-rule); }
+.hop:last-of-type { border-bottom: 0; }
+.hop > summary {
+  list-style: none; cursor: pointer;
+  display: grid; grid-template-columns: 2.5ch minmax(0, 1fr) auto 2ch;
+  column-gap: 1.25rem; align-items: baseline;
+  padding: 1rem 0;
+}
+.hop > summary::-webkit-details-marker { display: none; }
+.hop > summary:hover .host { text-decoration: underline; text-underline-offset: 0.2em; }
+.n { font: 700 1rem var(--mono); color: var(--fibre); }
+.who { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.host { font: 700 1rem/1.35 var(--mono); color: #fff; }
+.pos { font: 400 1rem/1.4 var(--body); color: var(--term-muted); }
+.when { font: 400 0.875rem var(--mono); color: var(--term-muted); white-space: nowrap; }
+.tog::after { content: "+"; font: 400 1.125rem var(--mono); color: var(--term-muted); }
+.hop[open] .tog::after { content: "\2212"; color: var(--fibre); }
+.hop[open] > summary { padding-bottom: 0.6rem; }
+
+.hop ul {
+  margin: 0 0 1.25rem; padding: 0 0 0 calc(2.5ch + 1.25rem); list-style: none;
+  max-width: 46rem;
+}
+.hop li {
+  position: relative; margin: 0 0 0.6rem; padding-left: 1.1rem;
+  font-size: 1rem; line-height: 1.55; color: var(--term-fg);
+}
+.hop li::before {
+  content: ""; position: absolute; left: 0; top: 0.72em;
+  width: 0.5rem; height: 2px; background: var(--fibre);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hop { animation: resolve 0.35s ease-out both; }
+  .hop:nth-of-type(1) { animation-delay: 0.15s; }
+  .hop:nth-of-type(2) { animation-delay: 0.35s; }
+  .hop:nth-of-type(3) { animation-delay: 0.55s; }
+  .hop:nth-of-type(4) { animation-delay: 0.75s; }
+  .hop:nth-of-type(5) { animation-delay: 0.95s; }
+}
+@keyframes resolve { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Sections ---------- */
+.sec {
+  display: grid; grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 1rem 3rem;
+  padding-block: 3rem;
+  border-top: 1px solid var(--rule);
+}
+.route + .sec { margin-top: clamp(2.5rem, 6vw, 4.5rem); }
+.sec > h2 {
+  margin: 0; font: 700 1.375rem/1.2 var(--display); font-stretch: 112%;
+}
+.sec-body { max-width: 44rem; }
+.sec-body > :first-child { margin-top: 0; }
+.sec-body p { margin: 0 0 1rem; }
+
+.results { margin: 0; padding: 0; list-style: none; }
+.results li { margin: 0 0 1.25rem; }
+.results strong { font-family: var(--display); font-weight: 700; font-stretch: 105%; }
+
+.skills { margin: 0; display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 0.9rem 1.5rem; }
+.skills dt { font: 700 1rem/1.5 var(--display); font-stretch: 105%; }
+.skills dd { margin: 0; }
+
+table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.7rem 1rem 0.7rem 0; border-bottom: 1px solid var(--rule); }
+thead th { font: 700 0.9375rem var(--display); color: var(--muted); border-bottom-color: var(--ink); }
+tbody th { font: 400 0.9375rem var(--mono); width: 4.5rem; color: var(--muted); }
+td small { display: block; color: var(--muted); font-size: 0.9375rem; }
+
+.entry { margin: 0 0 1.5rem; }
+.entry h3 { margin: 0; font: 700 1.0625rem/1.4 var(--display); font-stretch: 105%; }
+.entry .meta { margin: 0 0 0.35rem; color: var(--muted); font-size: 0.9375rem; }
+.entry ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+
+.mail { font: 700 clamp(1.5rem, 5vw, 2.5rem)/1.2 var(--display); font-stretch: 112%; overflow-wrap: anywhere; }
+
+footer { padding-block: 2rem 3rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9375rem; }
+
+@media (max-width: 760px) {
+  .sec { grid-template-columns: 1fr; gap: 0.75rem; padding-block: 2.25rem; }
+  .skills { grid-template-columns: 1fr; gap: 0.1rem; }
+  .skills dd { margin-bottom: 0.9rem; }
+  .hop > summary { grid-template-columns: 2.5ch minmax(0, 1fr) 2ch; }
+  .when { grid-column: 2; grid-row: 2; padding-top: 0.2rem; }
+  .tog { grid-column: 3; grid-row: 1; }
+  .hop ul { padding-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead wrap">
+  <h1>Nguyễn Thế Hiển</h1>
+  <p class="role">IT Manager, factory IT, infrastructure and automation</p>
+  <p class="intro">More than ten years across network engineering, system administration, software development and automation, plus hands-on experience running a manufacturing plant. I lead the four-person IT team at MISUMI Vietnam.</p>
+  <ul class="contact">
+    <li><a href="mailto:nthehien92@gmail.com">nthehien92@gmail.com</a></li>
+    <li><a href="https://github.com/hiencrabcode">github.com/hiencrabcode</a></li>
+    <li>Ho Chi Minh City, Vietnam</li>
+  </ul>
+</header>
+
+<main>
+<div class="wrap">
+
+  <section class="route" aria-labelledby="route-title">
+    <div class="route-head"><h2 id="route-title">traceroute from now, 5 hops max</h2></div>
+
+    <details class="hop" name="route" open>
+      <summary>
+        <span class="n">1</span>
+        <span class="who"><span class="host">MISUMI Vietnam</span><span class="pos">Team leader, senior IT executive</span></span>
+        <span class="when">Nov 2022 – now</span>
+        <span class="tog" aria-hidden="true"></span>
+      </summary>
+      <ul>
+        <li>Lead a team of 4 (2 developers, 2 helpdesk) and act as the IT link between business departments and technical teams, supporting 170 employees.</li>
+        <li>Administer servers (Windows, Linux), network and security (Fortinet firewall, Cisco, VPN, Synology NAS), Office 365 and Intune, with high availability, backup, restore and disaster recovery.</li>
+        <li>Deployed 150 automated processes with UiPath and Power Automate across Accounting, Sales and Warehouse, saving the equivalent of 8 FTE, about 16,000 hours a year.</li>
+        <li>Analyzed RPA cost-effectiveness (physical PC against cloud) and manage the RPA licenses.</li>
+        <li>Develop and maintain internal applications with Spring Boot and Vue.js, with CI/CD pipelines that seed data automatically for faster, more reliable deployments.</li>
+        <li>Built dashboards in Grafana and Power BI from ERP, SQL and PostgreSQL data to support business decisions.</li>
+        <li>Support ERP users and the barcode handheld terminals (HHT, CipherLab) used in warehouse operations.</li>
+        <li>Deliver L2 and L3 support, user training and documentation.</li>
+      </ul>
+    </details>
+
+    <details class="hop" name="route">
+      <summary>
+        <span class="n">2</span>
+        <span class="who"><span class="host">Giaha Plastic Co., Ltd</span><span class="pos">Assistant director and production manager</span></span>
+        <span class="when">Mar 2020 – Oct 2022</span>
+        <span class="tog" aria-hidden="true"></span>
+      </summary>
+      <ul>
+        <li>Joined to modernize factory operations through IT, automation and technical upgrades. Grew monthly revenue from VND 2 billion to 3 billion (+50%) by improving product quality and output.</li>
+        <li>Upgraded factory infrastructure and equipment, and designed and installed industrial electrical systems to support expansion.</li>
+        <li>Mastered machine operation and mold design and fabrication, and passed the know-how on to production staff.</li>
+        <li>Set material blending formulas for consistent quality that meets customer requirements, and cleared excess inventory and scrap to cut waste and cost.</li>
+        <li>Served as primary IT lead for ERP, accounting software (MISA), the MitaPro timekeeping system, the mail server, web hosting, databases and system security.</li>
+        <li>Led Kaizen, 5S and ISO compliance, and produced KPI reports with recommendations for the Board.</li>
+      </ul>
+    </details>
+
+    <details class="hop" name="route">
+      <summary>
+        <span class="n">3</span>
+        <span class="who"><span class="host">MISUMI Vietnam</span><span class="pos">Senior IT executive</span></span>
+        <span class="when">Sep 2018 – Mar 2020</span>
+        <span class="tog" aria-hidden="true"></span>
+      </summary>
+      <ul>
+        <li>Installed, configured and maintained hardware, software, network and Windows Server and domain systems across departments.</li>
+        <li>Supported the office and warehouse relocation projects: network setup, equipment migration and connectivity testing.</li>
+        <li>Handled helpdesk for end users (hardware, software, network) and resolved incidents with the technical and network teams.</li>
+        <li>Supported administration: IT documentation, internal request forms, contract paperwork and vendor and procurement coordination.</li>
+      </ul>
+    </details>
+
+    <details class="hop" name="route">
+      <summary>
+        <span class="n">4</span>
+        <span class="who"><span class="host">Vinawood Ltd.</span><span class="pos">Network and software developer</span></span>
+        <span class="when">Feb 2017 – Aug 2018</span>
+        <span class="tog" aria-hidden="true"></span>
+      </summary>
+      <ul>
+        <li>Managed network infrastructure (switches, routers, PBX, CCTV, access control) and optimized LAN and WAN performance for 80+ users.</li>
+        <li>Administered Windows systems, Active Directory, the mail server, VPS and cloud backup, and managed SQL Server (access control, backup, restore, monitoring).</li>
+        <li>Supported users of the in-house ERP system (user guides, training, incident tracking) and the MitaPro timekeeping system.</li>
+      </ul>
+    </details>
+
+    <details class="hop" name="route">
+      <summary>
+        <span class="n">5</span>
+        <span class="who"><span class="host">Viettel Ca Mau</span><span class="pos">Team leader, network infrastructure</span></span>
+        <span class="when">Sep 2014 – Dec 2016</span>
+        <span class="tog" aria-hidden="true"></span>
+      </summary>
+      <ul>
+        <li>Installed and troubleshot Internet, IPTV, leased line and GPON services for enterprise and residential customers.</li>
+        <li>Operated and maintained AON and GPON infrastructure to keep service stable and minimize downtime, and kept to SLA.</li>
+        <li>Assigned tasks, monitored the team's daily performance and trained new technicians.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="sec" aria-labelledby="h-results">
+    <h2 id="h-results">Results</h2>
+    <div class="sec-body">
+      <ul class="results">
+        <li><strong>About 16,000 hours a year saved.</strong> 150 automated processes at MISUMI Vietnam, equal to 8 full-time staff, across Accounting, Sales and Warehouse.</li>
+        <li><strong>Third prize, Saving Award, August 2023.</strong> An RPA bot that tracks Unfit Big Orders (UF BO), saving 3 hours a day and VND 51 million.</li>
+        <li><strong>IT for 170 employees.</strong> A team of four covering servers, network, security and ERP data.</li>
+        <li><strong>Revenue up 50%.</strong> Monthly revenue at Giaha Plastic grew from VND 2 billion to 3 billion through better quality and output.</li>
+        <li><strong>Two site moves.</strong> Project leader for a new factory in 2021, and key member for the network of a new warehouse in 2023: network design, vendor management, and testing connectivity and operation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-skills">
+    <h2 id="h-skills">Skills</h2>
+    <div class="sec-body">
+      <dl class="skills">
+        <dt>Automation and RPA</dt><dd>UiPath, Power Automate, Akabot, Selenium</dd>
+        <dt>Development</dt><dd>Spring Boot, Vue.js, CI/CD</dd>
+        <dt>Data and analytics</dt><dd>SQL Server, PostgreSQL, Grafana, Power BI</dd>
+        <dt>Systems and cloud</dt><dd>Windows Server, Linux (Ubuntu, CentOS), Azure, VMware, Office 365, Intune, ERP support, barcode and handheld terminals (HHT, CipherLab)</dd>
+        <dt>Network and security</dt><dd>Cisco, Fortinet, VPN, VoIP, Zabbix</dd>
+        <dt>Management</dt><dd>Team leadership, cross-functional communication, process optimization, user training</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-certs">
+    <h2 id="h-certs">Courses and certificates</h2>
+    <div class="sec-body">
+      <table>
+        <thead><tr><th scope="col">Year</th><th scope="col">Course</th><th scope="col">Provider</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">2022</th><td>Injection molding production techniques</td><td>Vietnam Plastics Association</td></tr>
+          <tr><th scope="row">2019</th><td>IT Management Skills</td><td>Robusta</td></tr>
+          <tr><th scope="row">2019</th><td>Fortinet NSE 4, Network Security Expert 4</td><td>Waren</td></tr>
+          <tr><th scope="row">2018</th><td>Cisco VoIP, CCNA Collaboration<small>Grade A</small></td><td>VnPro</td></tr>
+          <tr><th scope="row">2018</th><td>Linux Professional Institute, LPIC-1 and 2</td><td>Newstar Training Center</td></tr>
+          <tr><th scope="row">2017</th><td>CCNA Routing and Switching</td><td>VnPro</td></tr>
+          <tr><th scope="row">2016</th><td>Mobile programming: Android basic</td><td>Nhat Nghe Academy</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-edu">
+    <h2 id="h-edu">Education</h2>
+    <div class="sec-body">
+      <div class="entry">
+        <h3>Can Tho University</h3>
+        <p class="meta">Sep 2010 – Sep 2014</p>
+        <p>Control Engineering and Automation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-contact">
+    <h2 id="h-contact">Contact</h2>
+    <div class="sec-body">
+      <p>I am looking for an IT Manager role in a manufacturing environment: factory IT infrastructure, ERP support, cybersecurity and digitalization.</p>
+      <p><a class="mail" href="mailto:nthehien92@gmail.com">nthehien92@gmail.com</a></p>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Nguyễn Thế Hiển. Hosted on GitHub Pages.</div>
+</footer>
+
+</body>
+</html>
